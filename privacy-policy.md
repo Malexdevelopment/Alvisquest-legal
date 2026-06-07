@@ -2,8 +2,12 @@
 Last updated: June 7, 2026
 
 ## 1. Who We Are
-AlvisQuest is operated by Malex Developments (Alexandre Weber), Germany.
-Contact: malexdevelopment@gmail.com
+AlvisQuest is operated by:
+
+**Alexandre Francis Romain Weber**
+Bodenseestraße 19
+München, Deutschland
+Contact: alexandre@flashme.co
 
 ## 2. What Data We Collect
 When you use AlvisQuest, we collect:
@@ -36,7 +40,7 @@ If you are in the European Union, you have the right to:
 - Request deletion of your data
 - Request a copy of your data in a portable format
 
-To exercise any of these rights, email: malexdevelopment@gmail.com
+To exercise any of these rights, contact us at alexandre@flashme.co or via our contact form: https://docs.google.com/forms/d/1XWtGVnZPHdzHxAKEzkwNGxqV2n53EwdlaiYgEz2EuS4/viewform
 
 ## 7. Account Deletion
 You can delete your account and all associated data at any time from within the app (Settings > Delete Account). All your data is permanently deleted from our servers within 30 days.
@@ -48,6 +52,7 @@ AlvisQuest requires users to be at least 13 years old (16 in the EU) to create a
 We may update this policy. We will notify you of significant changes via the app. Continued use after changes constitutes acceptance.
 
 ## 10. Contact
-Malex Developments (Alexandre Weber)
-Germany
-malexdevelopment@gmail.com
+Alexandre Francis Romain Weber
+Bodenseestraße 19, München, Deutschland
+alexandre@flashme.co
+Contact form: https://docs.google.com/forms/d/1XWtGVnZPHdzHxAKEzkwNGxqV2n53EwdlaiYgEz2EuS4/viewform
