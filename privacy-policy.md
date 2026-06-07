@@ -4,9 +4,9 @@ Last updated: June 7, 2026
 ## 1. Who We Are
 AlvisQuest is operated by:
 
-**Alexandre Francis Romain Weber**
-Bodenseestraße 19
-München, Deutschland
+**Alexandre Francis Romain Weber & Maximilian Friedrich Thibault Weber**
+(trading as Malex Developments)
+Bodenseestraße 19, München, Deutschland
 Contact: alexandre@flashme.co
 
 ## 2. What Data We Collect
@@ -31,7 +31,7 @@ We do not sell your data or use it for advertising.
 Your data is stored securely by Supabase (supabase.com), a third-party cloud database provider. Data is encrypted in transit and at rest.
 
 ## 5. Public Decks
-If you choose to make a flashcard set public, its content becomes visible to other users. You confirm that you have the right to share any content you make public. You can make a set private again at any time.
+If you choose to make a flashcard set public, its content becomes visible to other AlvisQuest users and may appear in search results. Once published, a deck remains publicly accessible. You confirm that you have the right to share any content you make public.
 
 ## 6. Your Rights (GDPR)
 If you are in the European Union, you have the right to:
@@ -46,13 +46,13 @@ To exercise any of these rights, contact us at alexandre@flashme.co or via our c
 You can delete your account and all associated data at any time from within the app (Settings > Delete Account). All your data is permanently deleted from our servers within 30 days.
 
 ## 8. Children
-AlvisQuest requires users to be at least 13 years old (16 in the EU) to create an account. We do not knowingly collect data from children under these ages.
+AlvisQuest requires users to be at least 13 years old to create an account. We do not knowingly collect data from children under 13. If you become aware that a child under 13 has provided us with personal data, please contact us at alexandre@flashme.co.
 
 ## 9. Changes to This Policy
 We may update this policy. We will notify you of significant changes via the app. Continued use after changes constitutes acceptance.
 
 ## 10. Contact
-Alexandre Francis Romain Weber
+Alexandre Francis Romain Weber & Maximilian Friedrich Thibault Weber
 Bodenseestraße 19, München, Deutschland
 alexandre@flashme.co
 Contact form: https://docs.google.com/forms/d/1XWtGVnZPHdzHxAKEzkwNGxqV2n53EwdlaiYgEz2EuS4/viewform
