@@ -1,14 +1,14 @@
 # Privacy Policy
 
-**Flashme**
+**AlvisQuest**
 Effective date: 27 June 2026
-Last updated: 27 June 2026
+Last updated: 29 July 2026
 
 ---
 
 ## 1. Who we are
 
-Flashme is operated by **Malex Development**, a company registered under German law at **Bodenseestraße 19, 81241 München, Germany** ("we", "us", "our").
+AlvisQuest is operated by **Malex Development**, a company registered under German law at **Bodenseestraße 19, 81241 München, Germany** ("we", "us", "our").
 
 For the purpose of EU data protection law, we are the **data controller** of the personal data described in this policy.
 
@@ -30,7 +30,7 @@ When you sign in with Google or Apple we receive:
 
 ### 2.2 User-generated content
 
-Everything you create inside Flashme is stored on our servers:
+Everything you create inside AlvisQuest is stored on our servers:
 - Flashcard sets and individual cards (text, images, metadata)
 - AI-generated content associated with your cards (explanations, hints, grades, fact-check notes)
 - Audio recordings you make when answering cards by voice
@@ -50,9 +50,9 @@ We store records of your study activity:
 **Why:** To power spaced repetition scheduling and generate session insights.
 **Legal basis (GDPR):** Contract (Art. 6(1)(b)).
 
-### 2.4 Subscription and tier data
+### 2.4 Subscription, purchase, and token data
 
-We record your subscription tier (Standard / Pro / Pro-Latin / Scholar). Payment is processed exclusively by Apple (App Store) or Google (Google Play) — we never see or store your payment card details.
+We record your subscription tier, purchased add-ons, token balance, purchase product identifier, transaction identifier, and verification result. Payments are processed by Apple (App Store), Google (Google Play), or Mollie on our website. We never receive or store your full payment card details.
 
 **Why:** To gate features to the correct tier.
 **Legal basis (GDPR):** Contract (Art. 6(1)(b)).
@@ -68,7 +68,18 @@ Our infrastructure (Supabase) automatically records:
 **Legal basis (GDPR):** Legitimate interests (Art. 6(1)(f)) — detecting and preventing misuse of the service.
 **Retention:** Logs are retained for 30 days and then deleted.
 
-### 2.6 Data we do NOT collect
+### 2.6 Community safety data
+
+If you publish or interact with public decks, we process:
+- The public deck content and publisher account ID
+- Reports you submit, including the selected reason and optional details
+- Account IDs you choose to block
+- Moderation status and resolution timestamps
+
+**Why:** To filter, investigate, and remove content that violates our Terms or Community Guidelines, and to keep blocked publishers out of your public-deck results.
+**Legal basis (GDPR):** Legitimate interests (Art. 6(1)(f)) in preventing abuse and keeping the service safe.
+
+### 2.7 Data we do NOT collect
 
 - Location / GPS
 - Device contacts
@@ -80,9 +91,9 @@ Our infrastructure (Supabase) automatically records:
 
 ## 3. AI processing — how your content is used
 
-Several features send your card content or audio to third-party AI providers to generate a response. This is described in the sub-processor table in section 5.
+Several optional features send the content needed for a request to third-party AI providers. Depending on the feature, this may include card text, notes, prompts, documents, images, or audio. The app shows an AI data-sharing choice before any of this content is sent.
 
-**We do not use your data to train any AI model.** Each request is stateless — content is sent to the provider, a response is returned, and nothing is retained by the provider beyond their standard operational log retention (see their individual privacy policies).
+AI and translation features remain off unless you choose **Allow AI features**. If you choose **Not now**, non-AI features continue to work. You can withdraw permission at any time under **Help & Legal → AI data sharing**. Withdrawal prevents future AI and translation requests; it does not undo processing that was completed at your request before withdrawal.
 
 Features and the provider used:
 
@@ -91,17 +102,19 @@ Features and the provider used:
 | Card generation, Chat RAG | Mistral AI (EU) or Anthropic (US) depending on your tier |
 | Explain card, Grade answer, Smart hint | Mistral AI (EU) |
 | Fact check | Anthropic (US) — Pro and Scholar only |
-| Image generation | Black Forest Labs (EU) — Pro and Scholar only |
-| Lecture transcription | Gladia (EU) with Groq (US) as fallback — Pro+ only |
-| Image understanding / OCR | Mistral AI (EU) or Anthropic (US) depending on tier |
+| Image generation | Black Forest Labs — Pro and Scholar only |
+| Lecture transcription | Mistral Voxtral (EU), Deepgram high-accuracy option, or Groq fallback |
+| Image understanding / OCR | Mistral AI |
+| Translation | DeepL (EU) |
+| Semantic duplicate detection | Mistral AI |
 
-For tiers that route to US providers (primarily Scholar tier's Fact Check and Card Generation), see section 6 on international transfers.
+We contractually restrict processors to providing the requested service. We do not use your content to train our own AI models or sell it for advertising. Providers may retain limited request or security logs under their own enterprise terms and legal obligations; their current policies are linked below.
 
 ---
 
 ## 4. Calendar and Reminders access
 
-If you grant calendar or reminders permission, Flashme creates and updates study reminder events on your device. This data:
+If you grant calendar or reminders permission, AlvisQuest creates and updates study reminder events on your device. This data:
 - Is written directly to Apple Calendar / Reminders on your device
 - Is **not** transmitted to our servers
 - Remains fully under your control and can be deleted through your device's Calendar or Reminders app
@@ -114,24 +127,28 @@ We share data with the following processors, each bound by a Data Processing Agr
 
 | Processor | Role | Location | Privacy policy |
 |---|---|---|---|
-| **Supabase, Inc.** | Database, authentication, file storage, edge functions | EU (eu-west-1 / eu-central-1) | supabase.com/privacy |
-| **Mistral AI SAS** | AI inference (card generation, explanations, grading, embeddings) | France (EU) | mistral.ai/privacy |
-| **Anthropic, PBC** | AI inference (card generation, fact check, chat — Scholar tier) | USA | anthropic.com/privacy |
-| **Black Forest Labs GmbH** | Image generation | Germany (EU) | blackforestlabs.ai/privacy |
-| **Gladia SAS** | Lecture audio transcription | France (EU) | gladia.io/privacy |
-| **Groq, Inc.** | Lecture transcription fallback (Whisper) | USA | groq.com/privacy |
-| **Google LLC** | Sign-in authentication | USA | policies.google.com/privacy |
-| **Apple Inc.** | Sign-in authentication, App Store payment | USA | apple.com/legal/privacy |
+| **Supabase, Inc.** | Database, authentication, file storage, edge functions | EU (eu-central-2) | [supabase.com/privacy](https://supabase.com/privacy) |
+| **Mistral AI SAS** | AI inference (card generation, explanations, grading, embeddings, OCR, transcription) | France (EU) | [mistral.ai/privacy](https://mistral.ai/terms/#privacy-policy) |
+| **Anthropic, PBC** | AI inference (card generation, fact check, chat) | USA | [anthropic.com/privacy](https://www.anthropic.com/legal/privacy) |
+| **Black Forest Labs GmbH** | Image generation | EU / USA processing infrastructure | [blackforestlabs.ai/privacy](https://blackforestlabs.ai/privacy-policy/) |
+| **Deepgram, Inc.** | Optional high-accuracy audio transcription | USA | [deepgram.com/privacy](https://deepgram.com/privacy) |
+| **Groq, Inc.** | Lecture transcription fallback | USA | [groq.com/privacy](https://groq.com/privacy-policy/) |
+| **DeepL SE** | Translation | Germany (EU) | [deepl.com/privacy](https://www.deepl.com/privacy) |
+| **Google LLC** | Sign-in authentication | USA | [policies.google.com/privacy](https://policies.google.com/privacy) |
+| **Apple Inc.** | Sign-in authentication and App Store payment | USA | [apple.com/legal/privacy](https://www.apple.com/legal/privacy/) |
+| **Mollie B.V.** | Website payment processing | Netherlands (EU) | [mollie.com/privacy](https://www.mollie.com/privacy) |
 
 We do not sell, rent, or share your personal data with any third party for marketing or advertising purposes.
+
+We require every processor that receives user data to provide the same or an equal level of protection described in this policy and required by applicable law and the Apple App Review Guidelines. This is addressed through data-processing agreements, confidentiality and security obligations, purpose limitations, and appropriate transfer safeguards.
 
 ---
 
 ## 6. International data transfers
 
-Our primary infrastructure (Supabase) is hosted in the EU. Most AI providers we use are also EU-based (Mistral AI, Black Forest Labs, Gladia).
+Our primary infrastructure (Supabase) is hosted in the EU. Mistral AI and DeepL are EU-based. Some optional requests may be processed in the United States by Anthropic, Black Forest Labs infrastructure, Deepgram, Groq, Google, or Apple.
 
-For transfers to US-based providers (Anthropic, Groq, Google, Apple), we rely on **Standard Contractual Clauses (SCCs)** approved by the European Commission under Art. 46(2)(c) GDPR. Each of these providers has executed SCCs or operates under equivalent transfer mechanisms. Links to their transfer impact assessments are available from their respective privacy teams on request.
+For transfers to providers outside the EEA, we rely on an applicable adequacy decision, the EU-US Data Privacy Framework where available, or **Standard Contractual Clauses (SCCs)** approved by the European Commission under Art. 46(2)(c) GDPR, together with supplementary safeguards where required.
 
 ---
 
@@ -144,8 +161,11 @@ For transfers to US-based providers (Anthropic, Groq, Google, Apple), we rely on
 | Audio recordings | Retained until you delete the associated card or your account |
 | Uploaded images | Retained until you delete the associated card or your account |
 | Infrastructure logs | 30 days |
+| Public deck reports and moderation records | Up to 24 months after resolution, unless longer retention is needed for security or legal claims |
+| Blocked-account choices | Until you unblock the account or delete your account |
+| AI consent choice | Until you change the choice, delete the app data, or delete your account |
 
-When you delete your account (via Profile Settings → Delete Account), all personal data listed above is permanently deleted within 30 days. Anonymised aggregate statistics (e.g. total cards created across all users) are not deleted, as they cannot be linked back to you.
+When you delete your account (via Profile Settings → Delete Account), account data and user content are permanently deleted within 30 days, except records we must retain temporarily for fraud prevention, security, charge disputes, or legal claims. Anonymised aggregate statistics are not deleted because they cannot be linked back to you.
 
 ---
 
@@ -178,7 +198,7 @@ If you are a California resident, you have the right to:
 
 **Categories of personal information collected** (CCPA categories):
 
-| CCPA category | Examples in Flashme |
+| CCPA category | Examples in AlvisQuest |
 |---|---|
 | Identifiers | Email address, account ID |
 | Commercial information | Subscription tier |
@@ -194,7 +214,7 @@ To submit a CCPA request, email **alexandre@flashme.co** with the subject line "
 
 ## 10. Children
 
-Flashme is not directed at children under 13 (or under 16 in the EU). We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact us and we will delete it promptly.
+AlvisQuest is not directed at children under 13 (or under 16 in the EU where parental consent would otherwise be required). We do not knowingly collect personal data from children below the applicable age. Public decks are subject to content filtering, reporting, blocking, and moderation. If you believe we have inadvertently collected a child's data, please contact us and we will delete it promptly.
 
 ---
 
