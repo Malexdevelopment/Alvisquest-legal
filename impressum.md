@@ -9,7 +9,7 @@ Deutschland
 
 ## Kontakt
 
-E-Mail: alexandre@flashme.co
+E-Mail: hello@alvisquest.com
 Kontaktformular: https://docs.google.com/forms/d/1XWtGVnZPHdzHxAKEzkwNGxqV2n53EwdlaiYgEz2EuS4/viewform
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV

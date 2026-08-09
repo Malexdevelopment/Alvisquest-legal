@@ -12,7 +12,7 @@ AlvisQuest is operated by **Malex Development**, a company registered under Germ
 
 For the purpose of EU data protection law, we are the **data controller** of the personal data described in this policy.
 
-Contact for privacy matters: **alexandre@flashme.co**
+Contact for privacy matters: **hello@alvisquest.com**
 
 ---
 
@@ -181,7 +181,7 @@ If you are in the European Economic Area or the United Kingdom, you have the fol
 - **Right to object** — object to processing based on legitimate interests (section 2.5)
 - **Rights related to automated decision-making** — we do not make automated decisions with legal or similarly significant effects
 
-To exercise any right, email **alexandre@flashme.co**. We will respond within **30 days**. We may need to verify your identity before fulfilling a request.
+To exercise any right, email **hello@alvisquest.com**. We will respond within **30 days**. We may need to verify your identity before fulfilling a request.
 
 You also have the right to lodge a complaint with your national data protection authority. As a German-based controller, our lead supervisory authority is the [Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)](https://www.lda.bayern.de). The full list of EU authorities is at [edpb.europa.eu](https://www.edpb.europa.eu/about-edpb/about-edpb/members_en).
 
@@ -208,7 +208,7 @@ If you are a California resident, you have the right to:
 
 We do not sell personal information. We do not share personal information with third parties for cross-context behavioural advertising.
 
-To submit a CCPA request, email **alexandre@flashme.co** with the subject line "CCPA Request". We will respond within **45 days**, extendable by a further 45 days with notice.
+To submit a CCPA request, email **hello@alvisquest.com** with the subject line "CCPA Request". We will respond within **45 days**, extendable by a further 45 days with notice.
 
 ---
 
@@ -238,6 +238,6 @@ We will notify you of material changes by posting a notice in the app at least 1
 
 **Malex Development**
 Bodenseestraße 19, 81241 München, Germany
-Email: alexandre@flashme.co
+Email: hello@alvisquest.com
 
 For EU/UK users: if you have unresolved concerns, you may contact your local supervisory authority (see section 8).
