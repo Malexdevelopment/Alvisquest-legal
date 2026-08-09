@@ -56,4 +56,4 @@ These terms are governed by the laws of Germany.
 ## 12. Contact
 Alexandre Francis Romain Weber
 Bodenseestraße 19, München, Deutschland
-alexandre@flashme.co
+hello@alvisquest.com
