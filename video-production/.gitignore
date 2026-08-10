@@ -1,0 +1,28 @@
+# Médias et rendus — hors de git, ils rendraient le repo inclonable.
+# Voir MIGRATION.md §4 pour le transfert, REMOTE-REVIEW.md pour la relecture.
+*.mov
+*.mp4
+*.mkv
+*.avi
+*.prores
+*.wav
+*.aiff
+*.mp3
+
+# Exception : les proxys légers de relecture sont volontairement suivis.
+!preview*.mp4
+!*-preview.mp4
+!contact-sheet*.jpg
+
+# Sorties de rendu
+/out/
+/renders/
+/cache/
+
+# Runtimes locaux — à réinstaller depuis les manifestes sur chaque machine
+# (un Mac Intel et un Apple Silicon ne partagent pas les mêmes binaires).
+node_modules/
+.venv/
+__pycache__/
+
+.DS_Store
