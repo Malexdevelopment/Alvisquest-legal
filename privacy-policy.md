@@ -2,7 +2,7 @@
 
 **AlvisQuest**
 Effective date: 27 June 2026
-Last updated: 29 July 2026
+Last updated: 20 September 2026
 
 ---
 
@@ -99,16 +99,19 @@ Features and the provider used:
 
 | Feature | Provider |
 |---|---|
-| Card generation, Chat RAG | Mistral AI (EU) or Anthropic (US) depending on your tier |
-| Explain card, Grade answer, Smart hint | Mistral AI (EU) |
+| Card generation, Chat RAG | Mistral AI (EU), OpenAI (US) or Anthropic (US) depending on your tier; an equivalent backup model may be used if the selected model fails |
+| Explain card, Grade answer, Smart hint | Mistral AI (EU); OpenAI (US) or Google Gemini (US) may serve as backups where your updated AI consent applies |
 | Fact check | Anthropic (US) — Pro and Scholar only |
 | Image generation | Black Forest Labs — Pro and Scholar only |
 | Lecture transcription | Mistral Voxtral (EU), Deepgram high-accuracy option, or Groq fallback |
-| Image understanding / OCR | Mistral AI |
+| Image understanding | Mistral AI (EU) or Anthropic (US); OpenAI (US) or Google Gemini (US) may serve as backups where your updated AI consent applies |
+| OCR | Mistral AI (EU) |
 | Translation | DeepL (EU) |
 | Semantic duplicate detection | Mistral AI |
 
 We contractually restrict processors to providing the requested service. We do not use your content to train our own AI models or sell it for advertising. Providers may retain limited request or security logs under their own enterprise terms and legal obligations; their current policies are linked below.
+
+Gemini backup requests are enabled only after you accept the updated AI data-sharing choice. If you have not accepted it, the app uses a configured provider already covered by your previous choice.
 
 ---
 
@@ -130,6 +133,8 @@ We share data with the following processors, each bound by a Data Processing Agr
 | **Supabase, Inc.** | Database, authentication, file storage, edge functions | EU (eu-central-2) | [supabase.com/privacy](https://supabase.com/privacy) |
 | **Mistral AI SAS** | AI inference (card generation, explanations, grading, embeddings, OCR, transcription) | France (EU) | [mistral.ai/privacy](https://mistral.ai/terms/#privacy-policy) |
 | **Anthropic, PBC** | AI inference (card generation, fact check, chat) | USA | [anthropic.com/privacy](https://www.anthropic.com/legal/privacy) |
+| **OpenAI, L.L.C.** | AI inference and backup text/image understanding | USA | [openai.com/privacy](https://openai.com/policies/privacy-policy/) |
+| **Google LLC (Gemini API)** | Backup text and image understanding after updated AI consent | USA | [ai.google.dev/terms](https://ai.google.dev/gemini-api/terms) |
 | **Black Forest Labs GmbH** | Image generation | EU / USA processing infrastructure | [blackforestlabs.ai/privacy](https://blackforestlabs.ai/privacy-policy/) |
 | **Deepgram, Inc.** | Optional high-accuracy audio transcription | USA | [deepgram.com/privacy](https://deepgram.com/privacy) |
 | **Groq, Inc.** | Lecture transcription fallback | USA | [groq.com/privacy](https://groq.com/privacy-policy/) |
@@ -146,7 +151,7 @@ We require every processor that receives user data to provide the same or an equ
 
 ## 6. International data transfers
 
-Our primary infrastructure (Supabase) is hosted in the EU. Mistral AI and DeepL are EU-based. Some optional requests may be processed in the United States by Anthropic, Black Forest Labs infrastructure, Deepgram, Groq, Google, or Apple.
+Our primary infrastructure (Supabase) is hosted in the EU. Mistral AI and DeepL are EU-based. Some optional requests, including backup AI requests, may be processed in the United States by OpenAI, Anthropic, Google Gemini, Black Forest Labs infrastructure, Deepgram, Groq, or Apple.
 
 For transfers to providers outside the EEA, we rely on an applicable adequacy decision, the EU-US Data Privacy Framework where available, or **Standard Contractual Clauses (SCCs)** approved by the European Commission under Art. 46(2)(c) GDPR, together with supplementary safeguards where required.
 
