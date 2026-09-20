@@ -99,19 +99,20 @@ Features and the provider used:
 
 | Feature | Provider |
 |---|---|
-| Card generation, Chat RAG | Mistral AI (EU), OpenAI (US) or Anthropic (US) depending on your tier; an equivalent backup model may be used if the selected model fails |
-| Explain card, Grade answer, Smart hint | Mistral AI (EU); OpenAI (US) or Google Gemini (US) may serve as backups where your updated AI consent applies |
-| Fact check | Anthropic (US) — Pro and Scholar only |
-| Image generation | Black Forest Labs — Pro and Scholar only |
-| Lecture transcription | Mistral Voxtral (EU), Deepgram high-accuracy option, or Groq fallback |
-| Image understanding | Mistral AI (EU) or Anthropic (US); OpenAI (US) or Google Gemini (US) may serve as backups where your updated AI consent applies |
-| OCR | Mistral AI (EU) |
-| Translation | DeepL (EU) |
-| Semantic duplicate detection | Mistral AI |
+| Card generation, Chat RAG and other text assistance | Mistral AI, OpenAI or Anthropic depending on the feature and subscription; OpenAI or Google Gemini may serve as configured backups |
+| Explain card, Grade answer, Smart hint and translation | Mistral AI or OpenAI, with OpenAI or Google Gemini as configured backups |
+| Fact check | OpenAI, with another OpenAI model or Google Gemini as configured backups — Pro and Scholar only |
+| Image generation | Black Forest Labs, with OpenAI or Google Gemini as configured backups — Pro and Scholar only |
+| Lecture transcription | Mistral Voxtral or Deepgram for the high-accuracy option, with OpenAI or Google Gemini as configured backups |
+| Image understanding and OCR | Mistral AI or Anthropic depending on the feature and subscription, with OpenAI or Google Gemini as configured backups |
+| Semantic duplicate detection | Mistral AI embeddings, with OpenAI or Google Gemini embeddings as configured backups |
+| Pronunciation audio | Mistral AI, with OpenAI or Google Gemini as configured backups |
 
 We contractually restrict processors to providing the requested service. We do not use your content to train our own AI models or sell it for advertising. Providers may retain limited request or security logs under their own enterprise terms and legal obligations; their current policies are linked below.
 
-Gemini backup requests are enabled only after you accept the updated AI data-sharing choice. If you have not accepted it, the app uses a configured provider already covered by your previous choice.
+Gemini requests are enabled only after you accept the updated AI data-sharing choice. If you have not accepted it, the app uses a configured provider already covered by your previous choice. An administrator can change the default provider and model for each feature without changing the purpose of the request.
+
+For reliability and troubleshooting, we record the result of each AI request, the provider and model used, error category, and processing time. These diagnostic records do not contain the submitted text, media, generated response, or API key and are deleted after 90 days.
 
 ---
 
@@ -131,14 +132,12 @@ We share data with the following processors, each bound by a Data Processing Agr
 | Processor | Role | Location | Privacy policy |
 |---|---|---|---|
 | **Supabase, Inc.** | Database, authentication, file storage, edge functions | EU (eu-central-2) | [supabase.com/privacy](https://supabase.com/privacy) |
-| **Mistral AI SAS** | AI inference (card generation, explanations, grading, embeddings, OCR, transcription) | France (EU) | [mistral.ai/privacy](https://mistral.ai/terms/#privacy-policy) |
-| **Anthropic, PBC** | AI inference (card generation, fact check, chat) | USA | [anthropic.com/privacy](https://www.anthropic.com/legal/privacy) |
-| **OpenAI, L.L.C.** | AI inference and backup text/image understanding | USA | [openai.com/privacy](https://openai.com/policies/privacy-policy/) |
-| **Google LLC (Gemini API)** | Backup text and image understanding after updated AI consent | USA | [ai.google.dev/terms](https://ai.google.dev/gemini-api/terms) |
+| **Mistral AI SAS** | AI inference (text, embeddings, OCR, transcription, speech generation) | France (EU) | [mistral.ai/privacy](https://mistral.ai/terms/#privacy-policy) |
+| **Anthropic, PBC** | AI inference (text and image understanding) | USA | [anthropic.com/privacy](https://www.anthropic.com/legal/privacy) |
+| **OpenAI, L.L.C.** | AI inference (text, images, OCR, transcription, embeddings, speech generation) | USA | [openai.com/privacy](https://openai.com/policies/privacy-policy/) |
+| **Google LLC (Gemini API)** | AI inference (text, images, OCR, transcription, embeddings, speech generation) after updated AI consent | USA | [ai.google.dev/terms](https://ai.google.dev/gemini-api/terms) |
 | **Black Forest Labs GmbH** | Image generation | EU / USA processing infrastructure | [blackforestlabs.ai/privacy](https://blackforestlabs.ai/privacy-policy/) |
 | **Deepgram, Inc.** | Optional high-accuracy audio transcription | USA | [deepgram.com/privacy](https://deepgram.com/privacy) |
-| **Groq, Inc.** | Lecture transcription fallback | USA | [groq.com/privacy](https://groq.com/privacy-policy/) |
-| **DeepL SE** | Translation | Germany (EU) | [deepl.com/privacy](https://www.deepl.com/privacy) |
 | **Google LLC** | Sign-in authentication | USA | [policies.google.com/privacy](https://policies.google.com/privacy) |
 | **Apple Inc.** | Sign-in authentication and App Store payment | USA | [apple.com/legal/privacy](https://www.apple.com/legal/privacy/) |
 | **Mollie B.V.** | Website payment processing | Netherlands (EU) | [mollie.com/privacy](https://www.mollie.com/privacy) |
@@ -151,7 +150,7 @@ We require every processor that receives user data to provide the same or an equ
 
 ## 6. International data transfers
 
-Our primary infrastructure (Supabase) is hosted in the EU. Mistral AI and DeepL are EU-based. Some optional requests, including backup AI requests, may be processed in the United States by OpenAI, Anthropic, Google Gemini, Black Forest Labs infrastructure, Deepgram, Groq, or Apple.
+Our primary infrastructure (Supabase) is hosted in the EU. Mistral AI is EU-based. Some optional requests, including backup AI requests, may be processed in the United States by OpenAI, Anthropic, Google Gemini, Black Forest Labs infrastructure, Deepgram, or Apple.
 
 For transfers to providers outside the EEA, we rely on an applicable adequacy decision, the EU-US Data Privacy Framework where available, or **Standard Contractual Clauses (SCCs)** approved by the European Commission under Art. 46(2)(c) GDPR, together with supplementary safeguards where required.
 
@@ -166,6 +165,7 @@ For transfers to providers outside the EEA, we rely on an applicable adequacy de
 | Audio recordings | Retained until you delete the associated card or your account |
 | Uploaded images | Retained until you delete the associated card or your account |
 | Infrastructure logs | 30 days |
+| AI request diagnostics (provider, model, result, error category, duration; no submitted content) | 90 days |
 | Public deck reports and moderation records | Up to 24 months after resolution, unless longer retention is needed for security or legal claims |
 | Blocked-account choices | Until you unblock the account or delete your account |
 | AI consent choice | Until you change the choice, delete the app data, or delete your account |
